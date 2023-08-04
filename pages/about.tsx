@@ -1,10 +1,9 @@
-import Head from 'next/head';
 import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
 import Link from 'next/link';
-import { Navbar } from '@/components/Navbar';
 import { MainLayout } from '@/components/layouts/MainLayout';
 import { DarkLayout } from '@/components/layouts/DarkLayout';
+import { ReactElement } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,7 +21,7 @@ export default function About() {
   );
 }
 
-About.getLayout = function getLayout(page) {
+About.getLayout = function getLayout(page: ReactElement) {
   return (
     <MainLayout>
       <DarkLayout>
